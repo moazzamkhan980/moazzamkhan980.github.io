@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>Learning Javascript</title>
+		<script type="text/javascript">
+			function add(){
+				var x = parseInt(document.getElementById('first_num').value);
+				var y = parseInt(document.getElementById('second_num').value);
+				var answerbox = document.getElementById('answer');
+				if(isNaN(x) || isNaN(y)){
+					answerbox.className = "alert alert-danger";
+					answerbox.innerHTML = "Sorry you did not enter a number";
+				} else {
+					answerbox.className = "alert alert-light";
+					document.getElementById('answer').innerHTML = x+y;
+				}
+			}
+			function subtract(){
+				var x = parseInt(document.getElementById('first_num').value);
+				var y = parseInt(document.getElementById('second_num').value);
+				var answerbox = document.getElementById('answer');
+				if(isNaN(x) || isNaN(y)){
+					answerbox.className = "alert alert-danger";
+					answerbox.innerHTML = "Sorry you did not enter a number";
+				} else {
+					answerbox.className = "alert alert-light";
+					document.getElementById('answer').innerHTML = x-y;
+				}
+			}
+			function multiply(){
+				var x = parseInt(document.getElementById('first_num').value);
+				var y = parseInt(document.getElementById('second_num').value);
+				var answerbox = document.getElementById('answer');
+				if(isNaN(x) || isNaN(y)){
+					answerbox.className = "alert alert-danger";
+					answerbox.innerHTML = "Sorry you did not enter a number";
+				} else {
+					answerbox.className = "alert alert-light";
+					document.getElementById('answer').innerHTML = x*y;
+				}
+			}
+			function divide(){
+				var x = parseInt(document.getElementById('first_num').value);
+				var y = parseInt(document.getElementById('second_num').value);
+				var answerbox = document.getElementById('answer');
+				if(isNaN(x) || isNaN(y)){
+					answerbox.className = "alert alert-danger";
+					answerbox.innerHTML = "Sorry you did not enter a number";
+				} else {
+					answerbox.className = "alert alert-light";
+					document.getElementById('answer').innerHTML = x/y;
+				}
+			}
+		</script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="card" style="width: 30rem;">
+		  <div class="card-body">
+		    <h4 class="card-title">Calculator</h4>
+			<form>
+			  First number:<br>
+			  <input type="text" number="firstnumber" id="first_num"><br>
+			  Last number:<br>
+			  <input type="text" number="lastnumber" id="second_num">
+			</form>
+			<button class="btn btn-primary" type="button" onclick="add()">+</button>
+			<button class="btn btn-primary" type="button" onclick="subtract()">-</button>
+			<button class="btn btn-primary" type="button" onclick="multiply()">*</button>
+			<button class="btn btn-primary" type="button" onclick="divide()">/</button>
+			<div id="answer"></div>
+		  </div>
+		</div>
+
+	</body>
+</html>
+
